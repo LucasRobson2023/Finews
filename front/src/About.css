@@ -1,0 +1,25 @@
+/* src/About.css */
+
+.About {
+  height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+.About h1 {
+  font-size: 3rem;
+  color: #1a73e8;
+  margin-bottom: 1rem;
+}
+
+.About p {
+  font-size: 1.2rem;
+  color: #333333;
+  max-width: 600px;
+}

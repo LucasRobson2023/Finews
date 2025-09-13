@@ -1,0 +1,98 @@
+/* Full-page container */
+.chatgpt-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* 60px is navbar height */
+  padding-top: 0;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+/* Scrollable chat history */
+.chatgpt-messages {
+  flex: 1; /* takes up all space above input */
+  overflow-y: auto;
+  padding: 1rem;
+  background: #f7f7f8;
+}
+
+/* Each message row */
+.chatgpt-message {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+/* Assistant on left, User on right */
+.chatgpt-message.assistant {
+  justify-content: flex-start;
+}
+
+.chatgpt-message.user {
+  justify-content: flex-end;
+}
+
+/* Bubble styling */
+.chatgpt-bubble {
+  max-width: 75%;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+}
+
+.chatgpt-message.assistant .chatgpt-bubble {
+  background: #e5e5ea;
+  color: #000;
+  border-bottom-left-radius: 0.3rem;
+}
+
+.chatgpt-message.user .chatgpt-bubble {
+  background: #007bff;
+  color: #fff;
+  border-bottom-right-radius: 0.3rem;
+}
+
+/* Input bar fixed to bottom */
+.chatgpt-input-bar {
+  display: flex;
+  align-items: flex-end;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #ddd;
+  background: #fff;
+}
+
+/* Textarea styling */
+.chatgpt-input {
+  flex: 1;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  max-height: 150px; /* stops it growing infinitely */
+  overflow-y: auto;
+  outline: none;
+}
+
+.chatgpt-input:focus {
+  border-color: #007bff;
+}
+
+/* Send button */
+.chatgpt-send {
+  margin-left: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  font-size: 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.chatgpt-send:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
